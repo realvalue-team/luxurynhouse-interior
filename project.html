@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <!-- pagnation -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css" /> -->
   </head>
   <body>
     <div class="container">
@@ -281,30 +281,64 @@
           desc2: "TUNE ROCK SOFT 1200*1200",
           img: "./assets/images/img_temp.png",
         },
+        {
+          title: "프린테크 사옥 11",
+          desc1: "Valpaint Valrenna 108D",
+          desc2: "TUNE ROCK SOFT 1200*1200",
+          img: "./assets/images/img_temp.png",
+        },
+        {
+          title: "프린테크 사옥 12",
+          desc1: "Valpaint Valrenna 108D",
+          desc2: "TUNE ROCK SOFT 1200*1200",
+          img: "./assets/images/img_temp.png",
+        },
       ];
       $("#pagination1").pagination({
         dataSource: cardData,
         pageSize: 9, // 한 페이지에 보여줄 카드 수
+        autoHidePrevious: true,
+        autoHideNext: true,
+        pageRange: 4,
+        afterRender: function () {
+          // Prev 버튼 이미지로 교체
+          $(".paginationjs-prev a").html('<img src="./assets/images/ico_pagination_next.png" alt="이전" />');
+
+          // Next 버튼 이미지로 교체
+          $(".paginationjs-next a").html('<img src="./assets/images/ico_pagination_next.png" alt="다음" />');
+
+          // 2. …(ellipsis) 제거
+          $(".paginationjs-ellipsis").remove();
+
+          // 3. 마지막 페이지 버튼 제거
+          const $pages = $(".paginationjs-page");
+          const lastPage = Math.max(...$pages.map((i, el) => parseInt($(el).text())));
+          $pages.each(function () {
+            if (parseInt($(this).text()) === lastPage) {
+              $(this).remove();
+            }
+          });
+        },
         callback: function (data, pagination) {
           let html = `<ul class="card-list">`;
 
           $.each(data, function (index, item) {
             html += `
-            <li class="card-item">
-              <a href="project_detail.html">
-                <div class="card-img">
-                  <img src="${item.img}" alt="${item.title}" />
-                </div>
-                <div class="card-info">
-                  <strong class="tit">${item.title}</strong>
-                  <p class="desc">
-                    ${item.desc1}<br />
-                    ${item.desc2}
-                  </p>
-                </div>
-              </a>
-            </li>
-          `;
+                <li class="card-item">
+                  <a href="project_detail.html">
+                    <div class="card-img">
+                      <img src="${item.img}" alt="${item.title}" />
+                    </div>
+                    <div class="card-info">
+                      <strong class="tit">${item.title}</strong>
+                      <p class="desc">
+                        ${item.desc1}<br />
+                        ${item.desc2}
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              `;
           });
 
           html += `</ul>`;
