@@ -1,66 +1,596 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>럭셔리앤 건축인테리어</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <!-- SWIPER -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <meta charset="utf-8" />
+    <!-- 반응형 [s] -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <!-- 반응형 [e] -->
+    <meta name="naver-site-verification" content="" />
+    <!-- 네이버 소유확인 -->
+    <meta name="description" content="" />
+    <!-- 사이트 설명문구 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sample" />
+    <meta property="og:description" content="" />
+    <!-- 사이트 설명문구 -->
+    <meta property="og:image" content="./assets/img/common/logo_luxury-interior.svg" />
+    <meta property="og:url" content="" />
+    <title>럭셔리앤하우스 인테리어</title>
+    <script src="./assets/js/jquery-1.8.3.min.js"></script>
+    <script src="./assets/js/jquery-ui.js"></script>
+    <script src="./assets/js/topmenu_script.js"></script>
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="./assets/css/aos.css" />
+    <link rel="stylesheet" href="./assets/css/sh_common.css" />
+    <link rel="stylesheet" href="./assets/css/sh_main.css" />
   </head>
   <body>
-    <div class="container">
-      <!-- header -->
-      <header class="header">
-        <div class="inner">
-          <h1 class="logo">
-            <a href="./index.html"><img src="./assets/images/logo_white.svg" alt="LUXURY N arch-interior" /></a>
-          </h1>
-          <nav class="gnb">
-            <button class="btn-close"><img src="./assets/images/ico_mo_close.svg" alt="메뉴닫기" /></button>
-            <ul class="gnb-list">
-              <li><a href="./index.html">MAIN</a></li>
-              <li><a href="./project.html">PROJECT</a></li>
-              <li><a href="./consulting.html">CONSULTING</a></li>
-            </ul>
-          </nav>
-          <button class="btn-mo">
-            <img src="./assets/images/ico_white_mo.svg" alt="메뉴보기" />
-          </button>
+    <!-- sh_wrapper [s] -->
+    <div id="sh_wrapper">
+      <!-- sh_hd [s] -->
+      <header id="sh_hd">
+        <div class="sh_lnb_bg"></div>
+        <div id="sh_hd_wrapper">
+          <div id="shGnb" class="main">
+            <div class="sh_logo">
+              <a href="./index.html"><img src="./assets/img/common/logo_w_luxury-interior.svg" alt="luxuryNhouse-interior" /></a>
+            </div>
+
+            <!-- 상단메뉴 -->
+            <nav class="sh_nav">
+              <ul>
+                <li>
+                  <a href="./company/company.html">회사소개</a>
+                  <ul class="sh_lnb_s" style="display: none; opacity: 1">
+                    <li><a href="./company/company.html">인사말</a></li>
+                    <li><a href="./company/history.html">회사연혁</a></li>
+                    <li><a href="./company/organization.html">조직도</a></li>
+                    <li><a href="./company/location.html">오시는길</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="./business/interior.html">사업분야</a>
+                  <ul class="sh_lnb_s" style="display: none; opacity: 1">
+                    <li><a href="./business/interior.html">인테리어</a></li>
+                    <li><a href="./business/remodeling.html">리모델링</a></li>
+                    <li><a href="./business/building.html">건축</a></li>
+                    <li><a href="./business/furniture.html">가구</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="./portfolio/portfolio.html">포트폴리오</a>
+                  <ul class="sh_lnb_s" style="display: none; opacity: 1">
+                    <li><a href="./portfolio/portfolio.html">포트폴리오</a></li>
+                    <li><a href="./portfolio/gallery.html">시공갤러리</a></li>
+                    <li><a href="./portfolio/performance.html">주요실적</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="./consulting/request.html">온라인상담문의</a>
+                  <ul class="sh_lnb_s" style="display: none; opacity: 1">
+                    <li><a href="./consulting/request.html">견적의뢰</a></li>
+                    <li><a href="./consulting/order_state.html">수주현황</a></li>
+                    <li><a href="./consulting/online_inquiry.html">온라인문의</a></li>
+                  </ul>
+                </li>
+                <!-- <li>
+                  <a href="">고객센터</a>
+                  <ul class="sh_lnb_s" style="display: none; opacity: 1">
+                    <li><a href="">공지사항</a></li>
+                    <li><a href="">자유게시판</a></li>
+                  </ul>
+                </li> -->
+              </ul>
+            </nav>
+          </div>
+
+          <!-- 반응형메뉴 [s] -->
+          <div id="topmenuM">
+            <h1 id="m_logo">
+              <a href="./index.html"><img src="./assets/img/common/logo_luxury-interior.svg" alt="luxuryNhouse-interior" /></a>
+            </h1>
+            <!-- 메뉴 버튼 -->
+            <div id="m_navBtn"><span></span></div>
+            <!-- 오픈 메뉴 -->
+            <div id="navWrap">
+              <div class="inner">
+                <ul class="m_lnb">
+                  <li>
+                    <button class="m_bmenu" type="button">회사소개</button>
+                    <ul class="m_smenu">
+                      <li><a href="./company/company.html">인사말</a></li>
+                      <li><a href="./company/history.html">회사연혁</a></li>
+                      <li><a href="./company/organization.html">조직도</a></li>
+                      <li><a href="./company/location.html">오시는길</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <button class="m_bmenu" type="button">사업분야</button>
+                    <ul class="m_smenu">
+                      <li><a href="./business/interior.html">인테리어</a></li>
+                      <li><a href="./business/remodeling.html">리모델링</a></li>
+                      <li><a href="./business/building.html">건축</a></li>
+                      <li><a href="./business/furniture.html">가구</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <button class="m_bmenu" type="button">포트폴리오</button>
+                    <ul class="m_smenu">
+                      <li><a href="./portfolio/portfolio.html">포트폴리오</a></li>
+                      <li><a href="./portfolio/gallery.html">시공갤러리</a></li>
+                      <li><a href="./portfolio/performance.html">주요실적</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <button class="m_bmenu" type="button">온라인상담문의</button>
+                    <ul class="m_smenu">
+                      <li><a href="./consulting/request.html">견적의뢰</a></li>
+                      <li><a href="./consulting/order_state.html">수주현황</a></li>
+                      <li><a href="./consulting/online_inquiry.html">온라인문의</a></li>
+                    </ul>
+                  </li>
+                  <!-- <li>
+                    <button class="m_bmenu" type="button">고객센터</button>
+                    <ul class="m_smenu">
+                      <li><a href="">공지사항</a></li>
+                      <li><a href="">자유게시판</a></li>
+                    </ul>
+                  </li> -->
+                </ul>
+                <p class="mo_hd_copy">ⓒ 2025 LUXRYN INTERIOR.</p>
+              </div>
+            </div>
+          </div>
+          <!-- 반응형메뉴 [e] -->
         </div>
       </header>
-      <!-- //header -->
-      <!-- main -->
-      <main class="main">
-        <div class="main-swiper">
-          <div class="swiper">
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide">
-                <img src="./assets/images/img_main_banner01.jpg" alt="project메인배너01" />
+      <!-- sh_hd [e] -->
+
+      <!-- sh_container [s] -->
+      <main id="sh_container">
+        <!-- sh_container_wrapper [s] -->
+        <div id="sh_container_wrapper">
+          <!-- marin_banner [s] -->
+          <div id="main_banner">
+            <div id="mainVisual">
+              <div id="main01" class="slider_wrap" data-aos="fade-right">
+                <div class="slider swiper-container">
+                  <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                      <div data-swiper-parallax-x="40%"><img src="./assets/img/main/main01_img01.jpg" alt="메인이미지" /></div>
+                    </li>
+                    <li class="swiper-slide" data-swiper-parallax-x="40%">
+                      <div data-swiper-parallax-x="40%"><img src="./assets/img/main/main01_img02.jpg" alt="메인이미지" /></div>
+                    </li>
+                    <li class="swiper-slide" data-swiper-parallax-x="40%">
+                      <div data-swiper-parallax-x="40%"><img src="./assets/img/main/main01_img03.jpg" alt="메인이미지" /></div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="txt_area">
+                <div>
+                  <div id="main02" class="slider_wrap" data-aos="fade-down">
+                    <div class="slider swiper-container">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                          <div data-swiper-parallax-x="40%"><img src="./assets/img/main/main02_img01.jpg" alt="메인이미지" /></div>
+                        </li>
+                        <li class="swiper-slide" data-swiper-parallax-x="40%">
+                          <div data-swiper-parallax-x="40%"><img src="./assets/img/main/main02_img02.jpg" alt="메인이미지" /></div>
+                        </li>
+                        <li class="swiper-slide" data-swiper-parallax-x="40%">
+                          <div data-swiper-parallax-x="40%"><img src="./assets/img/main/main02_img03.jpg" alt="메인이미지" /></div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="main03" class="slider_wrap" data-aos="fade-up" data-aos-delay="200">
+                    <div class="slider swiper-container">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                          <div data-swiper-parallax-x="40%"><img src="./assets/img/main/main03_img01.jpg" alt="메인이미지" /></div>
+                        </li>
+                        <li class="swiper-slide">
+                          <div data-swiper-parallax-x="40%"><img src="./assets/img/main/main03_img02.jpg" alt="메인이미지" /></div>
+                        </li>
+                        <li class="swiper-slide">
+                          <div data-swiper-parallax-x="40%"><img src="./assets/img/main/main03_img03.jpg" alt="메인이미지" /></div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="btxt">
+                    <span class="sub_tit" data-aos="fade-in" data-aos-delay="300">High end Interior</span>
+                    <p data-aos="fade-in" data-aos-delay="300">Designing the Future, Building Your Dreams.</p>
+                    <div class="controls" data-aos="fade-in" data-aos-delay="300">
+                      <div class="pager"></div>
+                      <div class="swiper-progress-bar">
+                        <span class="slide_progress-bar"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            $("#mainVisual .slider_wrap").delay(0).animate({ opacity: "1", "margin-left": "0" }, 600);
+            var mainSwiper = new Swiper("#main01 .swiper-container", {
+              parallax: true,
+              grabCursor: true,
+              loop: true,
+              slideActiveClass: "on",
+              slidesPerView: 1,
+              slideActiveClass: "slider_active",
+              allowTouchMove: true,
+              touchRatio: 1,
+              speed: 1000,
+              spaceBetween: 0,
+              autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+              },
+              pagination: {
+                el: "#mainVisual .pager",
+                type: "fraction",
+              },
+              on: {
+                init: function () {
+                  $(".swiper-progress-bar").removeClass("animate");
+                  $(".swiper-progress-bar").removeClass("active");
+                  $(".swiper-progress-bar").eq(0).addClass("animate");
+                  $(".swiper-progress-bar").eq(0).addClass("active");
+                },
+                slideChangeTransitionStart: function () {
+                  $(".swiper-progress-bar").removeClass("animate");
+                  $(".swiper-progress-bar").removeClass("active");
+                  $(".swiper-progress-bar").eq(0).addClass("active");
+                },
+                slideChangeTransitionEnd: function () {
+                  $(".swiper-progress-bar").eq(0).addClass("animate");
+                },
+              },
+            });
+
+            var topSwiper = new Swiper("#main02 .swiper-container", {
+              parallax: true,
+              grabCursor: true,
+              loop: true,
+              slideActiveClass: "on",
+              slidesPerView: 1,
+              slideActiveClass: "slider_active",
+              allowTouchMove: true,
+              touchRatio: 1,
+              speed: 1000,
+              spaceBetween: 0,
+              pagination: {
+                el: "#mainVisual .pager",
+                type: "fraction",
+              },
+              on: {
+                init: function () {
+                  $(".swiper-progress-bar").removeClass("animate");
+                  $(".swiper-progress-bar").removeClass("active");
+                  $(".swiper-progress-bar").eq(0).addClass("animate");
+                  $(".swiper-progress-bar").eq(0).addClass("active");
+                },
+                slideChangeTransitionStart: function () {
+                  $(".swiper-progress-bar").removeClass("animate");
+                  $(".swiper-progress-bar").removeClass("active");
+                  $(".swiper-progress-bar").eq(0).addClass("active");
+                },
+                slideChangeTransitionEnd: function () {
+                  $(".swiper-progress-bar").eq(0).addClass("animate");
+                },
+              },
+            });
+
+            var bottomSwiper = new Swiper("#main03 .swiper-container", {
+              parallax: true,
+              grabCursor: true,
+              loop: true,
+              slideActiveClass: "on",
+              slidesPerView: 1,
+              slideActiveClass: "slider_active",
+              allowTouchMove: true,
+              touchRatio: 1,
+              speed: 1000,
+              spaceBetween: 0,
+              pagination: {
+                el: "#mainVisual .pager",
+                type: "fraction",
+              },
+              on: {
+                init: function () {
+                  $(".swiper-progress-bar").removeClass("animate");
+                  $(".swiper-progress-bar").removeClass("active");
+                  $(".swiper-progress-bar").eq(0).addClass("animate");
+                  $(".swiper-progress-bar").eq(0).addClass("active");
+                },
+                slideChangeTransitionStart: function () {
+                  $(".swiper-progress-bar").removeClass("animate");
+                  $(".swiper-progress-bar").removeClass("active");
+                  $(".swiper-progress-bar").eq(0).addClass("active");
+                },
+                slideChangeTransitionEnd: function () {
+                  $(".swiper-progress-bar").eq(0).addClass("animate");
+                },
+              },
+            });
+
+            mainSwiper.controller.control = topSwiper;
+            topSwiper.controller.control = bottomSwiper;
+          </script>
+
+          <!-- sh_section [s] -->
+          <section id="sh_section">
+            <section id="atc01">
+              <span class="grid" data-aos="active" data-aos-anchor-placement="top-center"></span>
+              <span class="grid" data-aos="active" data-aos-anchor-placement="top-center"></span>
+              <div class="txt">
+                <p>우리는 공간을 미적으로 디자인하여 삶의 질을 향상시킵니다.</p>
+              </div>
+              <div class="item_wrap" data-aos="fade-up">
+                <article class="item">
+                  <div class="img_area" data-aos="active">
+                    <div>
+                      <p>01.</p>
+                      <span>우아한 선과 현대적인 감각이 어우러진</span>
+                    </div>
+                    <a href=""><img src="./assets/img/main/inc01/inc01_img01.jpg" alt="우아한 선과 현대적인 감각이 어우러진" /></a>
+                  </div>
+                </article>
+                <article class="item">
+                  <div class="img_area" data-aos="active">
+                    <div>
+                      <p>02.</p>
+                      <span>모던한 감성을 담은</span>
+                    </div>
+                    <a href=""><img src="./assets/img/main/inc01/inc01_img02.jpg" alt="모던한 감성을 담은" /></a>
+                  </div>
+                </article>
+                <article class="item">
+                  <div class="img_area" data-aos="active">
+                    <div>
+                      <p>03.</p>
+                      <span>공간을 초월한 아름다움과 현대적인 멋</span>
+                    </div>
+                    <a href=""><img src="./assets/img/main/inc01/inc01_img03.jpg" alt="공간을 초월한 아름다움과 현대적인 멋" /></a>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <!-- atc01 [e] -->
+
+            <article id="atc02">
+              <div class="tit_area" data-aos="fade-up" data-aos-delay="200">
+                <p>Creating Beautiful Spaces, One Room at a Time</p>
+                <span>
+                  우리의 작업은 고품질 소재, 섬세한 디테일, 혁신적인 디자인으로 구성되어 있습니다. 우리의 목표는 고객들이 편안하고 아름다운 공간에서 행복한 삶을 즐길 수 있도록 돕는 것입니다.
+                </span>
+                <a href="">More about us</a>
+              </div>
+              <div class="atc02_slide" class="swiper-container">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <a href=""><img src="./assets/img/main/inc02/inc02_img01.jpg" alt="인테리어 이미지" /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href=""><img src="./assets/img/main/inc02/inc02_img02.jpg" alt="인테리어 이미지" /></a>
+                  </li>
+                  <li class="swiper-slide">
+                    <a href=""><img src="./assets/img/main/inc02/inc02_img03.jpg" alt="인테리어 이미지" /></a>
+                  </li>
+                </ul>
+              </div>
+              <!--<div class="box"></div>-->
+              <div class="flow_txt" data-aos="fade-in" data-aos-delay="200">
+                <!-- 배너표시영역 -->
+                <div class="rolling-list">
+                  <!-- 원본배너 -->
+                  <img src="./assets/img/main/inc02/inc02_txt.png" alt="인테리어 이미지" />
+                </div>
+              </div>
+            </article>
+
+            <script>
+              var inc02Swiper = new Swiper(".atc02_slide", {
+                loop: true,
+                speed: 1200,
+                slidesPerView: "auto",
+                spaceBetween: 100,
+                centeredSlides: true,
+                pagination: false,
+                slideActiveClass: "on",
+                autoplay: {
+                  delay: 3000,
+                  disableOnInteraction: false,
+                },
+              });
+
+              // 롤링 배너 복제본 생성
+              let roller = document.querySelector(".rolling-list");
+              roller.id = "roller1";
+
+              let clone = roller.cloneNode(true);
+              clone.id = "roller2";
+              document.querySelector(".flow_txt").appendChild(clone);
+
+              document.querySelector("#roller1").style.left = "0px";
+              document.querySelector("#roller2").style.left = document.querySelector(".rolling-list img").offsetWidth + "px";
+
+              roller.classList.add("original");
+              clone.classList.add("clone");
+            </script>
+
+            <!-- atc02 [e] -->
+
+            <article id="atc03">
+              <div class="left">
+                <span class="grid" data-aos="active"></span>
+                <div class="tit">
+                  <img data-aos="fade-right" data-aos-delay="200" class="rotate_txt" src="./assets/img/main/inc03/inc03_icon01.png" alt="deco" />
+                  <p data-aos="fade-right" data-aos-delay="200">Our Clients</p>
+                  <span data-aos="fade-left" data-aos-delay="200">인테리어 디자인의 가능성을 끊임없이 탐구하며, 환경과 요구에 발맞춰 진화하고 성장합니다.</span>
+                </div>
+                <div class="wrap">
+                  <p class="img"></p>
+                  <div class="latest">
+                    <div class="list" data-aos="active">
+                      <ul>
+                        <li>
+                          <p class="status">
+                            <em class="on"></em>
+                            <em class="on"></em>
+                            <em class="on"></em>
+                          </p>
+                        </li>
+                      </ul>
+                      <p class="subj">26평 아파트 인테리어</p>
+                      <p class="cont">​경기도 부천시 부흥로</p>
+                      <p class="date">2024-04-11 ~ 2024-04-24</p>
+                    </div>
+                    <div class="list" data-aos="active">
+                      <ul>
+                        <li>
+                          <p class="status">
+                            <em class="on"></em>
+                            <em></em>
+                            <em></em>
+                          </p>
+                        </li>
+                      </ul>
+                      <p class="subj">26평 아파트 인테리어</p>
+                      <p class="cont">​경기도 부천시 부흥로</p>
+                      <p class="date">2024-04-11 ~ 2024-04-24</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="right">
+                <a href="" class="img_area" data-aos="fade-left" data-aos-delay="200"><img src="./assets/img/main/inc03/inc03_img02.jpg" alt="인테리어 이미지" /></a>
+                <p>ⓒ 2025 LUXRYN INTERIOR.</p>
+              </div>
+            </article>
+
+            <script>
+              $(window).on("scroll", function () {
+                var rotatei = $(this).scrollTop();
+                $(".rotate_txt").css("transform", "rotate(" + rotatei / 1.2 + "deg)");
+              });
+            </script>
+            <!-- atc03 [e] -->
+          </section>
+          <!-- sh_section [e] -->
+        </div>
+        <!-- sh_container_wrapper [e] -->
+      </main>
+      <!-- sh_container [e] -->
+
+      <!-- sh_ft [s] -->
+      <footer id="sh_ft">
+        <div class="top">
+          <div class="info">
+            <img src="./assets/img/common/logo_luxury-interior.svg" alt="luxuryNhouse-interior" />
+            <ul data-aos="fade-up" data-aos-delay="200">
+              <li>
+                <span>Tel</span>
+                02-6404-4286
               </li>
-              <li class="swiper-slide">
-                <img src="./assets/images/img_main_banner02.jpg" alt="project메인배너02" />
+              <li>
+                <span>E-mail</span>
+                ceo@luxuryNhouse.com
               </li>
             </ul>
+            <p data-aos="fade-up" data-aos-delay="400">
+              LUXRYN INTERIOR 대표이사: 유성철 ㅣ 사업자등록번호: 387-81-00793
+              <br />
+              사업장주소: 서울특별시 서초구 서초대로 27길 56, 1층 (방배동, 예일빌딩)
+              <br />
+              계좌번호: 국민은행 464801-01-176732 럭셔리앤 주식회사
+            </p>
+          </div>
+          <div class="quick_form">
+            <div id="quick_form">
+              <div class="tit_area">
+                <p data-aos="fade-right" data-aos-delay="200">contact us</p>
+                <span data-aos="fade-left" data-aos-delay="200">아늑하고 편안한 일상을 위한 공간 디자인</span>
+              </div>
+              <form data-aos="fade-up" data-aos-delay="200" name="fquicksms" method="post" action="" autocomplete="off" onsubmit="return fhead_submit(this);">
+                <input type="hidden" name="form_url" value="" />
+                <div id="sms_wrap">
+                  <div class="txt_area">
+                    <p class="txt">
+                      <label for="wr_name">이름</label>
+                      <input type="text" maxlength="20" name="wr_name" id="wr_name" placeholder="이름" required oninput="korean_ck(this)" />
+                    </p>
+                    <p class="txt">
+                      <label for="sh_phone">연락처</label>
+                      <input maxlength="12" type="text" name="sh_phone" id="sh_phone" placeholder="연락처" required oninput="Num_ck(this);" />
+                    </p>
+                  </div>
+                  <div class="txt_box">
+                    <label for="wr_content">문의내용</label>
+                    <textarea name="wr_content" id="wr_content" class="txt_st" placeholder="문의내용" id="wr_content"></textarea>
+                  </div>
+                  <div class="btm_cont">
+                    <div class="left_cont">
+                      <a id="agree_link" onclick="">개인정보 취급방침</a>
+                      <label for="m_agree" class="agree_txt">동의</label>
+                      <input type="checkbox" name="m_agree" id="m_agree" />
+                      <label for="m_agree"></label>
+                    </div>
+                    <div class="btn_wrap"><input type="submit" class="buttom_st" id="btn_submit" value="상담 신청하기" /></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <script>
+              function fhead_submit(f) {
+                if (!f.m_agree.checked) {
+                  alert("개인정보취급방침에 동의 해주세요.");
+                  $("#m_agree").focus();
+                  return false;
+                }
+              }
+              function korean_ck(obj) {
+                var val = obj.value;
+                var korean = /^[가-힣ㄱ-ㅎㅏ-ㅣㆍ ᆢ\s]*$/;
+                if (!korean.test(val)) {
+                  alert("한글만 입력해 주세요");
+                  obj.value = val.replace(/[^가-힣ㄱ-ㅎㅏ-ㅣㆍ ᆢ\s]+/g, "");
+                }
+              }
+              function Num_ck(obj) {
+                var val = obj.value;
+                if (isNaN(val)) {
+                  alert("숫자만 입력해 주세요");
+                  obj.value = val.replace(/[^0-9]/gi, "");
+                }
+              }
+            </script>
           </div>
         </div>
-        <div class="btn-group">
-          <a href="./project.html" class="btn-link">PROJECT</a>
-          <a href="./consulting.html" class="btn-link">CONSULTING</a>
+        <div class="ft_btm">
+          <div class="inner">
+            <p class="copy">Copyright 2025 LUXRYN INTERIOR. All Rights Reserved.</p>
+          </div>
         </div>
-      </main>
-      <!-- //main -->
+      </footer>
+      <!-- sh_ft [e] -->
     </div>
+    <!-- sh_wrapper [e] -->
 
-    <script src="./assets/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./assets/js/common.js"></script>
     <script>
-      const swiper = new Swiper(".main-swiper .swiper", {
-        autoplay: true,
-        effect: "fade",
-        speed: 3000,
-      });
+      AOS.init();
     </script>
   </body>
 </html>
