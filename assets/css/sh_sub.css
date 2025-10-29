@@ -1038,6 +1038,7 @@
 .sh_tbl_common td{border-bottom:1px solid #e1e1e1;font-size:14px;color:#777}
 
 #sh_write_tbl th {
+  min-width: 62px;
   width: 16%;
   padding: 10px 0;
   line-height: 1.6;
@@ -1045,7 +1046,7 @@
   background-color: #f5f6f8;
 }
 #sh_write_tbl td {
-  padding: 10px 0 10px 10px;
+  padding: 10px;
 }
 #sh_write_tbl label {font-size: 15px;}
 #sh_write_tbl .sh_input {
@@ -1122,6 +1123,11 @@
   vertical-align: middle;
   font-size: 14px;
 }
+@media (max-width: 768px) {
+  #sh_write_tbl .agr_area p {
+    display: block;
+  }
+}
 
 /* 리스트 */
 #sh_list_tbl tbody tr:hover{background-color:#fafafa}
@@ -1169,7 +1175,7 @@
 @media(max-width:580px){
 .list_top{padding:0 10px}
 #sh_bo_sch{width:100%}
-#sh_bo_sch input[type=text]{width:calc(100% - 115px)}
+#sh_bo_sch input[type=text]{width:calc(100% - 117px)}
 #sh_bo_gall #sh_gall_ul{gap:15px}
 }
 

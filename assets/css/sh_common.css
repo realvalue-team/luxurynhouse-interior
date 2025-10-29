@@ -821,7 +821,7 @@ input[type=submit] {
 }
 
 #quick_form {
-  padding-left: 85px;
+  padding: 0 45px;
   font-size: 15px;
   color: #000;
   font-weight: 500;
@@ -832,9 +832,11 @@ input[type=submit] {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  gap: 10px;
   margin-bottom: 60px;
 }
 #quick_form .tit_area p {
+  flex-shrink: 0;
   font-size: 78px;
   color: #000;
   text-transform: uppercase;
@@ -1078,6 +1080,9 @@ input[type=submit] {
   }
   #sh_ft .info p {
     font-weight: 500;
+  }
+  input[type="text"],input[type="password"] {
+    width: 100%;
   }
 }
 @media (max-width: 480px) {
